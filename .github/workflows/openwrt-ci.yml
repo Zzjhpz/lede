@@ -45,8 +45,14 @@ jobs:
           ./scripts/feeds install -a
         #       sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 
-      - name: Generate configuration file
-        run: make defconfig
+      - name: Generate configuration file for Xiaomi AX6000
+        run: |
+          make defconfig
+          sed -i 's/CONFIG_TARGET_DEVICE_DEFAULT_PACKAGES=""/CONFIG_TARGET_DEVICE_DEFAULT_PACKAGES="kmod-mt7615e kmod-mt7615-firmware wpad-openssl"/' .config
+          sed -i 's/^CONFIG_TARGET_mediatek=.*/CONFIG_TARGET_mediatek=y/' .config
+          sed -i 's/^CONFIG_TARGET_mediatek_mt7986a=.*/CONFIG_TARGET_mediatek_mt7986a=y/' .config
+          sed -i 's/^CONFIG_TARGET_mediatek_mt7986a_DEVICE_xiaomi_redmi_ax6000=.*/CONFIG_TARGET_mediatek_mt7986a_DEVICE_xiaomi_redmi_ax6000=y/' .config
+
 
       - name: Download packages
         run: make download -j16
