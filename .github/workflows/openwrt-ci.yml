@@ -12,8 +12,6 @@ on:
    inputs:
       description: ''
 
-permissions:
-  contents: read
 
 jobs:
 
