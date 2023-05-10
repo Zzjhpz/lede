@@ -50,9 +50,9 @@ jobs:
           make defconfig
           sed -i '/^CONFIG_TARGET_x86/d' .config
           sed -i 's/CONFIG_TARGET_DEVICE_DEFAULT_PACKAGES=""/CONFIG_TARGET_DEVICE_DEFAULT_PACKAGES="kmod-crypto-hw-safexcel kmod-mt7915e kmod-mt7986-firmware wpad-openssl uboot-envtools mt7986-wo-firmware""/' .config
-          sed -i 's/^\s*#CONFIG_TARGET_mediatek=.*/CONFIG_TARGET_mediatek=y/' .config
-          sed -i 's/^\s*#CONFIG_TARGET_mediatek_mt7986a=.*/CONFIG_TARGET_mediatek_mt7986a=y/' .config
-          sed -i 's/^\s*#CONFIG_TARGET_mediatek_mt7986a_DEVICE_xiaomi_redmi_ax6000=.*/CONFIG_TARGET_mediatek_mt7986a_DEVICE_xiaomi_redmi_ax6000=y/' .config
+          sed -i 's/^\s*CONFIG_TARGET_mediatek=.*/CONFIG_TARGET_mediatek=y/' .config
+          sed -i 's/^\s*CONFIG_TARGET_mediatek_mt7986a=.*/CONFIG_TARGET_mediatek_mt7986a=y/' .config
+          sed -i 's/^\s*CONFIG_TARGET_mediatek_mt7986a_DEVICE_xiaomi_redmi_ax6000=.*/CONFIG_TARGET_mediatek_mt7986a_DEVICE_xiaomi_redmi_ax6000=y/' .config
 
 
       - name: Download packages
