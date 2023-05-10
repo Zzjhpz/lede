@@ -47,9 +47,9 @@ jobs:
 
       - name: Generate configuration file for Xiaomi AX6000
         run: |
-         cp ./target/.config .config
-         make defconfig
-         
+          cp ./target/.config .config
+          make defconfig
+
       - name: Download packages
         run: make download -j16
 
