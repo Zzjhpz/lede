@@ -54,8 +54,8 @@ jobs:
         run: |
           cp ./target/.config .config
 
-      - name: Download packages
-        run: make download -j16
+     # - name: Download packages
+     #   run: make download -j16
 
       - name: Compile firmware
         run: |
