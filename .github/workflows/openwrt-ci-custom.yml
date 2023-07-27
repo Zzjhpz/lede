@@ -52,6 +52,7 @@ jobs:
 
       - name: Generate configuration file for You Wanna
         run: |
+          rm -rf ./tmp && rm -rf .config
           cp ./target/.config .config
           make defconfig
 
