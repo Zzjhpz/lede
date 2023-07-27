@@ -52,6 +52,7 @@ jobs:
 
       - name: Generate configuration file for You Wanna
         run: |
+          make dirclean
           cp ./target/.config .config
 
      # - name: Download packages
