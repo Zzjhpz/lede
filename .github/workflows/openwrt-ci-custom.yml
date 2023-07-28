@@ -52,8 +52,8 @@ jobs:
 
       - name: Generate configuration file for You Wanna
         run: |
-          cp ./target/config .config
-          make defconfig
+          cp ./target/config2 .config
+   #       make defconfig
 
       - name: Download packages
         run: make download -j16
