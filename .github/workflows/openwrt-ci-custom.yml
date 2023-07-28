@@ -53,7 +53,7 @@ jobs:
       - name: Generate configuration file for You Wanna
         run: |
           cp ./target/.config .config
-          make oldconfig
+          make defconfig
 
       - name: Download packages
         run: make download -j16
