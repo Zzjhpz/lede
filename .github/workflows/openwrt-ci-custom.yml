@@ -52,7 +52,7 @@ jobs:
 
       - name: Generate configuration file for You Wanna
         run: |
-          cp ./target/config .config
+          cp ./target/config2 .config
           make defconfig
 
       - name: Download packages
