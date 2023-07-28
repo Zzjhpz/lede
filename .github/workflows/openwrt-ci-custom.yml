@@ -54,7 +54,7 @@ jobs:
         run: |
           rm -rf .config
           make defconfig
-          cp ./target/config2 .config
+          cp ./target/config .config
 
       - name: Download packages
         run: make download -j16
